@@ -3,10 +3,43 @@ import './App.css';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
+  // Contact form state
+  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+  const [sending, setSending] = useState(false);
+  const [formStatus, setFormStatus] = useState(null);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+
+  // Contact form handler
+  const handleFormChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    setFormStatus(null);
+    try {
+      const res = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setFormStatus('Message sent successfully!');
+        setForm({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setFormStatus(data.error || 'Failed to send message.');
+      }
+    } catch (err) {
+      setFormStatus('Failed to send message.');
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <div className={`portfolio ${isLoaded ? 'loaded' : ''}`}>
@@ -75,7 +108,6 @@ function App() {
                 <li><span role="img" aria-label="JavaScript">🟨</span> JavaScript</li>
                 <li><span role="img" aria-label="HTML5">🟧</span> HTML5</li>
                 <li><span role="img" aria-label="CSS3">🟦</span> CSS3</li>
-                <li><span role="img" aria-label="SASS">💗</span> SASS</li>
               </ul>
             </div>
             <div className="skills-card">
@@ -87,7 +119,6 @@ function App() {
                 <li><span role="img" aria-label="Node.js">🟩</span> Node.js</li>
                 <li><span role="img" aria-label="MySQL">🍃</span> MySQL</li>
                 <li><span role="img" aria-label="PostgreSQL">🐘</span> PostgreSQL</li>
-                <li><span role="img" aria-label="Firebase">🔥</span> Firebase</li>
                 <li><span role="img" aria-label="REST API">🔗</span> REST API</li>
               </ul>
             </div>
@@ -99,7 +130,6 @@ function App() {
               <ul className="skills-list">
                 <li><span role="img" aria-label="Git">🟧</span> Git</li>
                 <li><span role="img" aria-label="GitHub">🐙</span> GitHub</li>
-                <li><span role="img" aria-label="Docker">🐳</span> Docker</li>
                 <li><span role="img" aria-label="Figma">🎨</span> Figma</li>
                 <li><span role="img" aria-label="CLI">⌨️</span> CLI</li>
               </ul>
@@ -111,9 +141,7 @@ function App() {
               <h3>Other</h3>
               <ul className="skills-list">
                 <li><span role="img" aria-label="Data Analysis">📈</span> Data Analysis</li>
-                <li><span role="img" aria-label="SEO">🔍</span> SEO</li>
                 <li><span role="img" aria-label="UI/UX Design">🖌️</span> UI/UX Design</li>
-                <li><span role="img" aria-label="PWA">📱</span> PWA</li>
                 <li><span role="img" aria-label="Cloud Services">☁️</span> Cloud Services</li>
               </ul>
             </div>
@@ -206,20 +234,20 @@ function App() {
           </div>
           <div className="contact-card">
             <h3>Send Me a Message</h3>
-            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+            <form className="contact-form" onSubmit={handleFormSubmit}>
               <div className="form-group">
-                <input type="text" placeholder="Your Name" required />
+                <input type="text" name="name" placeholder="Your Name" value={form.name} onChange={handleFormChange} required />
               </div>
               <div className="form-group">
-                <input type="email" placeholder="Your Email" required />
+                <input type="email" name="email" placeholder="Your Email" value={form.email} onChange={handleFormChange} required />
               </div>
               <div className="form-group">
-                <input type="text" placeholder="Subject" required />
+                <input type="text" name="subject" placeholder="Subject" value={form.subject} onChange={handleFormChange} required />
               </div>
               <div className="form-group">
-                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <textarea name="message" placeholder="Your Message" rows="5" value={form.message} onChange={handleFormChange} required></textarea>
               </div>
-              <button type="submit" className="submit-btn">
+              <button type="submit" className="submit-btn" disabled={sending}>
                 <span style={{marginRight: '0.5rem', display: 'inline-flex', verticalAlign: 'middle'}}>
                   {/* Paper plane SVG icon */}
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
@@ -227,8 +255,13 @@ function App() {
                     <polygon points="22 2 15 22 11 13 2 9 22 2" />
                   </svg>
                 </span>
-                <span style={{fontStyle: 'oblique'}}>Send Message</span>
+                <span style={{fontStyle: 'oblique'}}>{sending ? 'Sending...' : 'Send Message'}</span>
               </button>
+              {formStatus && (
+                <div style={{ marginTop: '1rem', color: formStatus.includes('success') ? 'green' : 'red', fontWeight: 500 }}>
+                  {formStatus}
+                </div>
+              )}
             </form>
           </div>
         </div>
