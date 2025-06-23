@@ -106,6 +106,7 @@ function App() {
               <ul className="skills-list">
                 <li><span role="img" aria-label="React">⚛️</span> React.js</li>
                 <li><span role="img" aria-label="JavaScript">🟨</span> JavaScript</li>
+                <li><span role="img" aria-label="Tailwind">📦</span>Tailwind</li>
                 <li><span role="img" aria-label="HTML5">🟧</span> HTML5</li>
                 <li><span role="img" aria-label="CSS3">🟦</span> CSS3</li>
               </ul>
@@ -165,19 +166,29 @@ function App() {
           </div>
           <div className="project-card">
             <div className="project-icon">📱</div>
-            <h3>E-Commerce Platform</h3>
-            <p className="tech-stack">HTML5, CSS3, JavaScript</p>
-            <p className="description">A responsive e-commerce website with product filtering, shopping cart functionality, and user authentication.</p>
+            <h3>Library Management System</h3>
+            <p className="tech-stack">React.js, Tailwind CSS, JavaScript, Node.js with Express</p>
+            <p className="description">A responsive Library Management website with books management, borrowing book functionality, borrowed and submitted book with thier Identfications and user authentication.</p>
             <div className="project-links">
               <a href="https://github.com/p-r-i-n-c-e-1" target="_blank" rel="noopener noreferrer">View Code</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="https://librarymanagement-vjgy.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            </div>
+          </div>
+                    <div className="project-card">
+            <div className="project-icon">📱</div>
+            <h3>Medlink Healthcare System</h3>
+            <p className="tech-stack">React.js, Tailwind CSS, JavaScript, Node.js with Express</p>
+            <p className="description">MedLink is a smart healthcare system that enables patients to book appointments, chat with doctors, receive health updates, and access care even via USSD making healthcare more accessible and efficient.</p>
+            <div className="project-links">
+              <a href="https://github.com/p-r-i-n-c-e-1" target="_blank" rel="noopener noreferrer">View Code</a>
+              <a href="https://medlink-ai-client.vercel.app/about" target="_blank" rel="noopener noreferrer">Live Demo</a>
             </div>
           </div>
           <div className="project-card">
             <div className="project-icon">🎨</div>
             <h3>Design Mobile App</h3>
             <p className="tech-stack">Figma</p>
-            <p className="description">This is a mobile app design for a event sekeer where users can search for events and get information about them.</p>
+            <p className="description">This is a mobile app design for an event sekeer, where users can search for event and get information about each event and he os she can buy or book by payink ang get the tickets. There is function where you can add new event and add all details related to that new event.</p>
             <div className="project-links">
               <a href="https://www.figma.com/design/ydHpXID2B4Biu5YqWq7pB7/EventSekeer?node-id=0-1&p=f&t=mtqwPFT1PJeYD2FP-0" target="_blank" rel="noopener noreferrer">View Designs</a>
             </div>
