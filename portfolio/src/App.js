@@ -155,16 +155,6 @@ function App() {
         <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
           <div className="project-card">
-            <div className="project-icon">🌐</div>
-            <h3>Portfolio Website</h3>
-            <p className="tech-stack">React, CSS3, Html, JavaScript</p>
-            <p className="description">A modern, responsive portfolio website showcasing my skills, my projects I had worked on and experience with smooth animations and interactive elements .</p>
-            <div className="project-links">
-              <a href="https://github.com/p-r-i-n-c-e-1" target="_blank" rel="noopener noreferrer">View Code</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
-          </div>
-          <div className="project-card">
             <div className="project-icon">📖</div>
             <h3>Library Management System</h3>
             <p className="tech-stack">React, Tailwind CSS, JavaScript, Node with Express</p>
