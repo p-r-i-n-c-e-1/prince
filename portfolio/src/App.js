@@ -157,8 +157,8 @@ function App() {
           <div className="project-card">
             <div className="project-icon">🌐</div>
             <h3>Portfolio Website</h3>
-            <p className="tech-stack">React, CSS3, JavaScript</p>
-            <p className="description">A modern, responsive portfolio website showcasing my skills and experience with smooth animations and interactive elements.</p>
+            <p className="tech-stack">React, CSS3, Html, JavaScript</p>
+            <p className="description">A modern, responsive portfolio website showcasing my skills, my projects I had worked on and experience with smooth animations and interactive elements .</p>
             <div className="project-links">
               <a href="https://github.com/p-r-i-n-c-e-1" target="_blank" rel="noopener noreferrer">View Code</a>
               <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
@@ -167,7 +167,7 @@ function App() {
           <div className="project-card">
             <div className="project-icon">📖</div>
             <h3>Library Management System</h3>
-            <p className="tech-stack">React.js, Tailwind CSS, JavaScript, Node.js with Express</p>
+            <p className="tech-stack">React, Tailwind CSS, JavaScript, Node with Express</p>
             <p className="description">A responsive Library Management website with books management, borrowing book functionality, borrowed and submitted book with thier Identfications and user authentication.</p>
             <div className="project-links">
               <a href="https://github.com/p-r-i-n-c-e-1" target="_blank" rel="noopener noreferrer">View Code</a>
@@ -177,7 +177,7 @@ function App() {
                     <div className="project-card">
             <div className="project-icon">🧱</div>
             <h3>Medlink Healthcare System</h3>
-            <p className="tech-stack">React.js, Tailwind CSS, JavaScript, Node.js with Express</p>
+            <p className="tech-stack">React, Tailwind CSS, JavaScript, Node with Express</p>
             <p className="description">MedLink is a smart healthcare system that enables patients to book appointments, chat with doctors, receive health updates, and access care even via USSD making healthcare more accessible and efficient.</p>
             <div className="project-links">
               <a href="https://github.com/p-r-i-n-c-e-1" target="_blank" rel="noopener noreferrer">View Code</a>
