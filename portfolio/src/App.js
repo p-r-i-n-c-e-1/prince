@@ -165,7 +165,7 @@ function App() {
             </div>
           </div>
           <div className="project-card">
-            <div className="project-icon">📱</div>
+            <div className="project-icon">📖</div>
             <h3>Library Management System</h3>
             <p className="tech-stack">React.js, Tailwind CSS, JavaScript, Node.js with Express</p>
             <p className="description">A responsive Library Management website with books management, borrowing book functionality, borrowed and submitted book with thier Identfications and user authentication.</p>
@@ -175,7 +175,7 @@ function App() {
             </div>
           </div>
                     <div className="project-card">
-            <div className="project-icon">📱</div>
+            <div className="project-icon">🧱</div>
             <h3>Medlink Healthcare System</h3>
             <p className="tech-stack">React.js, Tailwind CSS, JavaScript, Node.js with Express</p>
             <p className="description">MedLink is a smart healthcare system that enables patients to book appointments, chat with doctors, receive health updates, and access care even via USSD making healthcare more accessible and efficient.</p>
