@@ -178,11 +178,22 @@ function App() {
             <div className="project-icon">🎨</div>
             <h3>Design Mobile App</h3>
             <p className="tech-stack">Figma</p>
-            <p className="description">This is a mobile app design for an event sekeer, where users can search for event and get information about each event and he os she can buy or book by payink ang get the tickets. There is function where you can add new event and add all details related to that new event.</p>
+            <p className="description">This is a mobile app design for an event sekeer, where users can search for event and get information about each event and he or she can buy or book by payink ang get the tickets. There is function where you can add new event and add all details related to that new event.</p>
             <div className="project-links">
               <a href="https://www.figma.com/design/ydHpXID2B4Biu5YqWq7pB7/EventSekeer?node-id=0-1&p=f&t=mtqwPFT1PJeYD2FP-0" target="_blank" rel="noopener noreferrer">View Designs</a>
             </div>
           </div>
+
+             <div className="project-card">
+            <div className="project-icon">🎨</div>
+            <h3>Design Mobile App</h3>
+            <p className="tech-stack">Figma</p>
+            <p className="description">This is a newspaper website design for an update news and trending ones, where users can search for news. There is function where you can like, comments and subscribe to each new update and add all details related to that breaking news.</p>
+            <div className="project-links">
+              <a href="https://www.figma.com/design/P7GIhO1WCFNFMOQny0oJMg/Newspaperproject?node-id=0-1&p=f&t=4buRBBwqkCDPjrXB-0" target="_blank" rel="noopener noreferrer">View Designs</a>
+            </div>
+          </div>
+        
         </div>
       </section>
 
