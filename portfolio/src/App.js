@@ -186,7 +186,7 @@ function App() {
 
              <div className="project-card">
             <div className="project-icon">🎨</div>
-            <h3>Design Mobile App</h3>
+            <h3>Design News Website</h3>
             <p className="tech-stack">Figma</p>
             <p className="description">This is a newspaper website design for an update news and trending ones, where users can search for news. There is function where you can like, comments and subscribe to each new update and add all details related to that breaking news.</p>
             <div className="project-links">
